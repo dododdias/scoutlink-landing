@@ -17,7 +17,7 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;backgrou
 .nav{display:flex;align-items:center;justify-content:space-between;padding:20px 48px;border-bottom:0.5px solid rgba(255,255,255,0.08);background:rgba(13,17,23,0.95);position:fixed;top:0;left:0;right:0;z-index:100;backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);transition:padding 0.3s}
 .nav.scrolled{padding:14px 48px;border-bottom-color:rgba(255,255,255,0.12)}
 .nav-logo{display:flex;align-items:center;gap:10px;cursor:pointer;text-decoration:none}
-.nav-logo-icon{width:32px;height:32px;background:#04F500;border-radius:8px;display:flex;align-items:center;justify-content:center;transition:transform 0.3s}
+.nav-logo-icon{width:32px;height:32px;background:transparent;border-radius:8px;display:flex;align-items:center;justify-content:center;transition:transform 0.3s;overflow:hidden}
 .nav-logo:hover .nav-logo-icon{transform:rotate(90deg)}
 .nav-logo-text{font-size:18px;font-weight:500;color:#F2F2F2}
 .nav-links{display:flex;align-items:center;gap:32px}
@@ -231,8 +231,8 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;backgrou
 <!-- NAV -->
 <nav class="nav" id="navbar">
   <a class="nav-logo" href="#">
-    <div class="nav-logo-icon">
-      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="2.5" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg>
+    <div class="nav-logo-icon" style="background:transparent;padding:0;overflow:hidden">
+      <img src="Vector-3.svg" width="32" height="32" alt="ScoutLink" style="display:block">
     </div>
     <span class="nav-logo-text">ScoutLink</span>
   </a>
@@ -581,7 +581,9 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;backgrou
 <footer class="footer">
   <div>
     <a class="nav-logo" href="#" style="display:inline-flex;text-decoration:none">
-      <div class="nav-logo-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="2.5" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></div>
+      <div class="nav-logo-icon" style="background:transparent;padding:0;overflow:hidden">
+        <img src="Vector-3.svg" width="32" height="32" alt="ScoutLink" style="display:block">
+      </div>
       <span style="font-size:16px;font-weight:500;color:#F2F2F2">ScoutLink</span>
     </a>
     <p class="footer-desc" data-en="Connecting Brazilian student-athletes with US college coaches and scholarship opportunities." data-pt="Conectando atletas brasileiros com coaches universitários americanos e oportunidades de bolsa.">Connecting Brazilian student-athletes with US college coaches and scholarship opportunities.</p>
