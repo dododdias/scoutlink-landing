@@ -647,9 +647,10 @@ setTimeout(()=>{
     d3.select('#us-map-container svg').remove();
 
     const isMobile = window.innerWidth <= 768;
-    const width = mapContainer.getBoundingClientRect().width || (isMobile ? 340 : 760);
+    const containerWidth = mapContainer.getBoundingClientRect().width || (isMobile ? 340 : 760);
+    const width = containerWidth;
     const height = isMobile ? 200 : 320;
-    const scale = isMobile ? width * 0.65 : width * 0.75;
+    const scale = isMobile ? containerWidth * 1.1 : containerWidth * 0.58;
 
     const svg = d3.select('#us-map-container')
       .insert('svg', ':first-child')
