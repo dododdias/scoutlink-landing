@@ -415,45 +415,68 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;backgrou
       <div class="division-pill" style="background:rgba(245,158,11,0.1);border:0.5px solid rgba(245,158,11,0.3)"><div style="font-size:11px;color:#8B949E">NAIA</div><div style="font-size:22px;font-weight:600;color:#F59E0B">245</div></div>
     </div>
     <div class="map-wrap">
-      <svg class="map-svg" viewBox="0 0 800 280" xmlns="http://www.w3.org/2000/svg">
-        <!-- US outline simplified -->
-        <path d="M80,60 L200,45 L320,50 L440,48 L560,52 L680,55 L720,80 L740,120 L730,160 L700,190 L660,200 L620,195 L580,210 L540,220 L500,215 L460,225 L420,220 L380,215 L340,220 L300,210 L260,200 L220,195 L180,185 L140,175 L100,160 L75,130 L70,95 Z" fill="none" stroke="rgba(255,255,255,0.06)" stroke-width="1"/>
-        <!-- Florida -->
-        <path d="M580,195 L590,220 L600,240 L590,250 L575,245 L565,225 L570,200 Z" fill="none" stroke="rgba(255,255,255,0.06)" stroke-width="1"/>
-        <!-- Dots representing colleges -->
-        <circle class="map-dot" cx="120" cy="110" r="4"/>
-        <circle class="map-dot large" cx="150" cy="90" r="5.5"/>
-        <circle class="map-dot" cx="180" cy="130" r="4"/>
-        <circle class="map-dot" cx="220" cy="80" r="4"/>
-        <circle class="map-dot large" cx="260" cy="100" r="5.5"/>
-        <circle class="map-dot" cx="300" cy="70" r="4"/>
-        <circle class="map-dot" cx="340" cy="85" r="4"/>
-        <circle class="map-dot large" cx="380" cy="100" r="5.5"/>
-        <circle class="map-dot" cx="420" cy="75" r="4"/>
-        <circle class="map-dot" cx="460" cy="90" r="4"/>
-        <circle class="map-dot large" cx="500" cy="110" r="5.5"/>
-        <circle class="map-dot" cx="540" cy="80" r="4"/>
-        <circle class="map-dot" cx="580" cy="95" r="4"/>
-        <circle class="map-dot large" cx="620" cy="115" r="5.5"/>
-        <circle class="map-dot" cx="660" cy="130" r="4"/>
-        <circle class="map-dot" cx="690" cy="110" r="4"/>
-        <circle class="map-dot" cx="200" cy="155" r="4"/>
-        <circle class="map-dot large" cx="240" cy="165" r="5.5"/>
-        <circle class="map-dot" cx="280" cy="145" r="4"/>
-        <circle class="map-dot" cx="320" cy="155" r="4"/>
-        <circle class="map-dot large" cx="360" cy="140" r="5.5"/>
-        <circle class="map-dot" cx="400" cy="155" r="4"/>
-        <circle class="map-dot" cx="440" cy="145" r="4"/>
-        <circle class="map-dot large" cx="480" cy="160" r="5.5"/>
-        <circle class="map-dot" cx="520" cy="150" r="4"/>
-        <circle class="map-dot" cx="560" cy="165" r="4"/>
-        <circle class="map-dot large" cx="600" cy="155" r="5.5"/>
-        <circle class="map-dot" cx="640" cy="170" r="4"/>
-        <circle class="map-dot" cx="580" cy="215" r="4"/>
-        <!-- Pulsing rings on selected dots -->
-        <circle cx="380" cy="100" r="6" fill="none" stroke="#04F500" stroke-width="1.5" style="animation:ringPulse 2.5s infinite"/>
-        <circle cx="500" cy="110" r="6" fill="none" stroke="#04F500" stroke-width="1.5" style="animation:ringPulse 2.5s 0.8s infinite"/>
-        <circle cx="260" cy="100" r="6" fill="none" stroke="#04F500" stroke-width="1.5" style="animation:ringPulse 2.5s 1.6s infinite"/>
+      <svg class="map-svg" viewBox="0 0 960 600" xmlns="http://www.w3.org/2000/svg">
+        <g fill="rgba(255,255,255,0.06)" stroke="rgba(255,255,255,0.15)" stroke-width="1">
+          <!-- Continental US simplified state shapes -->
+          <path d="M120,80 L260,70 L270,120 L240,160 L200,170 L150,160 L110,130 Z"/> <!-- WA/OR -->
+          <path d="M130,165 L200,175 L195,230 L150,235 L120,210 Z"/> <!-- CA north -->
+          <path d="M150,235 L195,230 L190,300 L155,310 L135,280 Z"/> <!-- CA south -->
+          <path d="M200,80 L270,70 L280,130 L200,140 Z"/> <!-- ID/MT -->
+          <path d="M270,70 L380,65 L390,130 L280,130 Z"/> <!-- MT/WY/ND -->
+          <path d="M380,65 L500,60 L510,130 L390,130 Z"/> <!-- ND/SD/MN -->
+          <path d="M500,60 L600,65 L610,130 L510,130 Z"/> <!-- MN/WI/MI -->
+          <path d="M600,65 L700,70 L710,130 L610,130 Z"/> <!-- MI/OH/PA/NY -->
+          <path d="M700,70 L800,80 L810,130 L710,130 Z"/> <!-- NY/NE states -->
+          <path d="M280,130 L390,130 L395,200 L285,200 Z"/> <!-- WY/CO/NE/KS -->
+          <path d="M390,130 L510,130 L515,200 L395,200 Z"/> <!-- MN/IA/MO -->
+          <path d="M510,130 L610,130 L615,200 L515,200 Z"/> <!-- IL/IN/OH -->
+          <path d="M610,130 L710,130 L715,200 L615,200 Z"/> <!-- PA/WV/VA/MD -->
+          <path d="M710,130 L810,130 L815,190 L715,200 Z"/> <!-- NE coast -->
+          <path d="M200,140 L280,130 L285,200 L205,210 Z"/> <!-- NV/UT -->
+          <path d="M205,210 L285,200 L290,270 L210,280 Z"/> <!-- AZ/NM -->
+          <path d="M290,270 L395,200 L400,270 L295,280 Z"/> <!-- TX/OK north -->
+          <path d="M295,280 L400,270 L410,360 L300,360 Z"/> <!-- TX south -->
+          <path d="M395,200 L515,200 L520,270 L400,270 Z"/> <!-- KS/MO/AR -->
+          <path d="M515,200 L615,200 L620,270 L520,270 Z"/> <!-- TN/KY/WV -->
+          <path d="M615,200 L715,200 L720,265 L620,270 Z"/> <!-- VA/NC -->
+          <path d="M715,200 L815,190 L820,255 L720,265 Z"/> <!-- MD/DE/NJ -->
+          <path d="M520,270 L620,270 L625,330 L525,335 Z"/> <!-- MS/AL/GA -->
+          <path d="M620,270 L720,265 L725,325 L625,330 Z"/> <!-- SC/NC/VA -->
+          <path d="M400,360 L410,360 L415,420 L395,420 Z"/> <!-- TX coast -->
+          <path d="M525,335 L625,330 L630,385 L530,385 Z"/> <!-- AL/GA/FL north -->
+          <path d="M530,385 L630,385 L620,450 L545,460 Z"/> <!-- FL -->
+        </g>
+        <!-- Green dots for college locations -->
+        <circle cx="160" cy="130" r="5" fill="#04F500" opacity="0.7"/>
+        <circle cx="230" cy="90" r="4" fill="#04F500" opacity="0.6"/>
+        <circle cx="180" cy="260" r="4" fill="#04F500" opacity="0.6"/>
+        <circle cx="310" cy="170" r="5" fill="#04F500" opacity="0.7"/>
+        <circle cx="350" cy="110" r="4" fill="#04F500" opacity="0.6"/>
+        <circle cx="430" cy="100" r="6" fill="#04F500" opacity="0.9">
+          <animate attributeName="r" values="6;10;6" dur="2s" repeatCount="indefinite"/>
+          <animate attributeName="opacity" values="0.9;0.3;0.9" dur="2s" repeatCount="indefinite"/>
+        </circle>
+        <circle cx="550" cy="95" r="5" fill="#04F500" opacity="0.7"/>
+        <circle cx="480" cy="165" r="4" fill="#04F500" opacity="0.6"/>
+        <circle cx="560" cy="160" r="5" fill="#04F500" opacity="0.7"/>
+        <circle cx="650" cy="155" r="4" fill="#04F500" opacity="0.6"/>
+        <circle cx="680" cy="110" r="6" fill="#04F500" opacity="0.9">
+          <animate attributeName="r" values="6;10;6" dur="2.5s" repeatCount="indefinite"/>
+          <animate attributeName="opacity" values="0.9;0.3;0.9" dur="2.5s" repeatCount="indefinite"/>
+        </circle>
+        <circle cx="760" cy="120" r="4" fill="#04F500" opacity="0.6"/>
+        <circle cx="780" cy="160" r="5" fill="#04F500" opacity="0.7"/>
+        <circle cx="440" cy="235" r="4" fill="#04F500" opacity="0.6"/>
+        <circle cx="540" cy="300" r="5" fill="#04F500" opacity="0.7"/>
+        <circle cx="600" cy="310" r="4" fill="#04F500" opacity="0.6"/>
+        <circle cx="670" cy="240" r="5" fill="#04F500" opacity="0.7"/>
+        <circle cx="350" cy="320" r="6" fill="#04F500" opacity="0.9">
+          <animate attributeName="r" values="6;10;6" dur="3s" repeatCount="indefinite"/>
+          <animate attributeName="opacity" values="0.9;0.3;0.9" dur="3s" repeatCount="indefinite"/>
+        </circle>
+        <circle cx="580" cy="400" r="5" fill="#04F500" opacity="0.7"/>
+        <circle cx="720" cy="280" r="4" fill="#04F500" opacity="0.6"/>
+        <circle cx="800" cy="200" r="4" fill="#04F500" opacity="0.6"/>
       </svg>
       <div class="map-overlay"><strong>1,331</strong><span data-en="with NCAA program" data-pt="com programa NCAA">with NCAA program</span></div>
       <div class="map-hint"><p data-en="Interactive map available in the app" data-pt="Mapa interativo disponível no app">Interactive map available in the app</p><span data-en="Filter by state, division, scholarship & more" data-pt="Filtre por estado, divisão, bolsa e mais">Filter by state, division, scholarship & more</span></div>
